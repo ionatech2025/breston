@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
-import ProductTable from '@/components/ui/ProductTable';
+import ProductCard from '@/components/ui/ProductCard';
 import CTABanner from '@/components/ui/CTABanner';
 import { PRODUCT_CATEGORIES } from '@/lib/data/products';
 
@@ -41,11 +41,22 @@ export default function ProductsPage() {
                 </div>
             </section>
 
-            {/* Product tables */}
+            {/* Product cards */}
             <section className="py-16 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 space-y-16">
+                <div className="max-w-7xl mx-auto px-4 space-y-20">
                     {PRODUCT_CATEGORIES.map((cat) => (
-                        <ProductTable key={cat.id} category={cat} />
+                        <div key={cat.id} id={cat.id} className="scroll-mt-32">
+                            <SectionHeading
+                                title={cat.title}
+                                subtitle={cat.subtitle}
+                                centered={false}
+                            />
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {cat.rows.map((row, idx) => (
+                                    <ProductCard key={idx} columns={cat.columns} row={row} />
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </section>
