@@ -22,14 +22,23 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
-    // set up aliases
+    "baseUrl": "./",
+    // set up aliases for imports
     "paths": {
       "@/styles/*": [
         "styles/*"
       ],
       "@/components/*": [
         "components/*"
+      ],
+      "@/types": [
+        "types"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
       ]
     }
   },
