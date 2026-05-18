@@ -434,7 +434,7 @@ Embed Google Maps location for easier navigation to the office/facility.
 - SEO-friendly structure
 
 ### Hosting Recommendations
-- Standard web hosting with SSL certificate
+- vercel.com/
 - Domain: www.brestontech.com
 
 ### SEO Keywords
