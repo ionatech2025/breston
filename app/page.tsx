@@ -1,4 +1,33 @@
 import Link from "next/link";
+import { Stethoscope, Zap, RefreshCw, Wrench } from "lucide-react";
+import ServiceCard from "../components/ServiceCard";
+
+const services = [
+  {
+    title: "Medical Gases",
+    description: "High-purity gases meeting strict medical standards for hospitals and clinics.",
+    Icon: Stethoscope,
+    href: "/products",
+  },
+  {
+    title: "Industrial Gases",
+    description: "Reliable supply for manufacturing, welding, cutting, and processing operations.",
+    Icon: Zap,
+    href: "/products",
+  },
+  {
+    title: "Cylinder Services",
+    description: "Flexible hire, safe refilling, and reliable exchange programs.",
+    Icon: RefreshCw,
+    href: "/services",
+  },
+  {
+    title: "Technical Support",
+    description: "Professional guidance, system installation, and maintenance services.",
+    Icon: Wrench,
+    href: "/services",
+  },
+];
 
 export default function Home() {
   return (
@@ -77,6 +106,30 @@ export default function Home() {
                 Over time, we have continued to expand our capabilities to serve hospitals, laboratories, manufacturers, the oil & gas sector, welding and fabrication industries, research institutions, and commercial enterprises with reliable and efficient gas solutions.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Key Service Highlights Section */}
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Key Service Highlights
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Reliable solutions for healthcare, industry, and specialized operations.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4 lg:gap-8">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                Icon={service.Icon}
+                href={service.href}
+              />
+            ))}
           </div>
         </div>
       </div>
