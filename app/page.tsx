@@ -1,33 +1,9 @@
 import Link from "next/link";
-import { Stethoscope, Zap, RefreshCw, Wrench } from "lucide-react";
 import ServiceCard from "../components/ServiceCard";
+import IndustryCard from "../components/IndustryCard";
+import { services, industries, safetyCommitments, featuredItems } from "../data/home";
+import FeaturedCard from "../components/FeaturedCard";
 
-const services = [
-  {
-    title: "Medical Gases",
-    description: "High-purity gases meeting strict medical standards for hospitals and clinics.",
-    Icon: Stethoscope,
-    href: "/products",
-  },
-  {
-    title: "Industrial Gases",
-    description: "Reliable supply for manufacturing, welding, cutting, and processing operations.",
-    Icon: Zap,
-    href: "/products",
-  },
-  {
-    title: "Cylinder Services",
-    description: "Flexible hire, safe refilling, and reliable exchange programs.",
-    Icon: RefreshCw,
-    href: "/services",
-  },
-  {
-    title: "Technical Support",
-    description: "Professional guidance, system installation, and maintenance services.",
-    Icon: Wrench,
-    href: "/services",
-  },
-];
 
 export default function Home() {
   return (
@@ -130,6 +106,102 @@ export default function Home() {
                 href={service.href}
               />
             ))}
+          </div>
+        </div>
+      </div>
+      {/* Industries We Serve Section */}
+      <div className="bg-zinc-50 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Industries We Serve
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Providing reliable gas solutions across diverse sectors.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+            {industries.map((industry) => (
+              <IndustryCard
+                key={industry.name}
+                name={industry.name}
+                Icon={industry.Icon}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Safety & Quality Commitment Section */}
+      <div className="bg-slate-900 py-24 sm:py-32 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Safety & Quality Commitment
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-300">
+              Safety and quality are at the center of our operations. We follow strict safety procedures and industry best practices across all areas:
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+            {safetyCommitments.map((commitment) => (
+              <div key={commitment} className="flex items-center gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 hover:bg-white/10 transition-colors">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+                <div className="text-base font-semibold leading-7 text-white">{commitment}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Featured Products & Services Section */}
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Featured Products & Services
+            </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Explore our top solutions for medical and industrial needs.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+            {featuredItems.map((item) => (
+              <FeaturedCard
+                key={item.title}
+                type={item.type}
+                title={item.title}
+                description={item.description}
+                image={item.image}
+                href={item.href}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Bottom CTA Section */}
+      <div className="bg-blue-600">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to power your operations?
+            <br />
+            Get in touch with us today.
+          </h2>
+          <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
+            <Link
+              href="/contact"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-xs hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Request Quote
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
+            >
+              Contact Us <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </div>
