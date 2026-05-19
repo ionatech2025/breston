@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, Loader as Loader2, CircleCheck as CheckCircle } from 'lucide-react';
 import type { ContactFormData } from '@/types';
 
@@ -33,6 +33,17 @@ export default function ContactForm() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  // Auto hide success message after 30 seconds
+  useEffect(() => {
+    if (!success) return;
+
+    const timer = setTimeout(() => {
+      setSuccess(false);
+    }, 2000); // 2 seconds
+
+    return () => clearTimeout(timer);
+  }, [success]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
