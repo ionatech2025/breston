@@ -45,16 +45,27 @@ export default function ContactForm() {
     return () => clearTimeout(timer);
   }, [success]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    // Simulated submission since it is a static site
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSuccess(true);
-      setForm(INITIAL_STATE);
+      const formData = new FormData(e.currentTarget);
+      formData.append("access_key", "b506a2ba-01ee-4a03-beaa-e0d7f829a647");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSuccess(true);
+        setForm(INITIAL_STATE);
+      } else {
+        setError(data.message || 'Something went wrong. Please try again or contact us by phone.');
+      }
     } catch (err) {
       setError('Something went wrong. Please try again or contact us by phone.');
     } finally {
