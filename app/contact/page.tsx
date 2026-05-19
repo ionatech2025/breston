@@ -47,7 +47,7 @@ export default function ContactPage() {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section className="bg-gradient-to-r from-brand-blue-800 to-brand-blue-600 py-16">
+            <section className="bg-gradient-to-r from-brand-blue-500 to-brand-blue-800 py-16">
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <span className="inline-block text-brand-green-300 font-semibold text-sm uppercase tracking-widest mb-3">Get In Touch</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>

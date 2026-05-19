@@ -12,7 +12,7 @@ export default function CTABanner({
     subtitle = 'Contact our team for product inquiries, technical consultation, bulk supply solutions, or cylinder hire services.',
 }: CTABannerProps) {
     return (
-        <section className="bg-gradient-to-r from-brand-blue-600 to-brand-blue-800 py-16">
+        <section className="bg-gradient-to-r from-brand-blue-500 to-brand-blue-800 py-16">
             <div className="max-w-4xl mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
                 <p className="text-brand-blue-100 text-lg mb-8 max-w-2xl mx-auto">{subtitle}</p>

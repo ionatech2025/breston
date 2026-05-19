@@ -88,7 +88,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand-blue-900 via-brand-blue-800 to-brand-blue-700">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand-blue-500 via-brand-blue-700 to-brand-blue-900">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-brand-green-500 blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-brand-blue-300 blur-3xl" />
@@ -222,12 +222,13 @@ export default function HomePage() {
       </section>
 
       {/* Key offerings */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-brand-blue-500 via-brand-blue-700 to-brand-blue-900">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeading
-            label="What We Offer"
-            title="Comprehensive Gas Solutions"
-            subtitle="From medical oxygen to specialty gases, cylinders to pipeline installation — we deliver what your operations need."
+            label="WHAT WE DO"
+            title="Our Services"
+            subtitle="End-to-end gas solutions from supply and distribution to installation, maintenance, and technical support — all backed by a commitment to safety and quality."
+            light={true}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {KEY_OFFERINGS.map(({ icon: Icon, title, description, color, bg }) => (
