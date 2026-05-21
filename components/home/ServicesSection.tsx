@@ -29,7 +29,7 @@ const KEY_OFFERINGS = [
     accentColor: 'bg-amber-500',
   },
   {
-    image: '/images/home/services/pipeline_installation3.webp',
+    image: '/images/home/services/pipeline_installation.png',
     title: 'Pipeline Installation',
     description: 'Professional medical gas pipeline design, installation, testing, and commissioning for healthcare facilities.',
     accentColor: 'bg-teal-500',
