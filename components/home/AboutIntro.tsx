@@ -1,12 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { CircleCheck as CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function AboutIntro() {
   return (
-    <section className="py-24 bg-[#070e17] relative overflow-hidden">
-      {/* Background Decorative glow */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-brand-green-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-brand-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-24 relative overflow-hidden bg-brand-blue-900">
+      {/* Background Image Container */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/gas_cylinders.jpg"
+          alt="Breston Gas Cylinders background"
+          fill
+          className="object-cover object-center lg:object-right"
+          sizes="100vw"
+          priority
+        />
+        {/* Bluish transparent gradient overlay to blend into the brand blue theme and ensure readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/95 via-brand-blue-900/85 to-brand-blue-900/60 lg:from-brand-blue-900/98 lg:via-brand-blue-900/85 lg:to-brand-blue-900/45" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -55,6 +66,7 @@ export default function AboutIntro() {
             <div>
               <Link
                 href="/about"
+                id="about-intro-learn-more"
                 className="inline-flex items-center gap-2 text-brand-green-400 font-bold hover:text-brand-green-300 transition-colors group text-sm md:text-base"
               >
                 Learn More About Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -62,46 +74,12 @@ export default function AboutIntro() {
             </div>
           </div>
 
-          {/* Right Column: Grid and Blended Image */}
-          <div className="flex justify-center items-center lg:justify-end">
-            <div className="relative w-full max-w-lg h-[520px] rounded-3xl overflow-hidden bg-slate-950/40 border border-white/5 flex items-center justify-center p-8 shadow-2xl group">
-              {/* Subtle Grid Pattern Overlay */}
-              <div 
-                className="absolute inset-0 opacity-20 pointer-events-none" 
-                style={{
-                  backgroundImage: `
-                    linear-gradient(to right, rgba(32, 120, 168, 0.15) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(32, 120, 168, 0.15) 1px, transparent 1px)
-                  `,
-                  backgroundSize: '48px 48px',
-                }}
-              />
-              
-              {/* Floating ISO Certified Badge */}
-              <div className="absolute top-6 right-6 bg-brand-green-500/10 backdrop-blur-md border border-brand-green-500/20 rounded-full px-4 py-1.5 flex items-center gap-2 text-xs font-semibold text-brand-green-300 z-10 shadow-lg select-none">
-                <span className="w-2 h-2 rounded-full bg-brand-green-400 animate-pulse" />
-                ISO Certified
-              </div>
-
-              {/* Cylinders Image Container with soft radial gradient mask */}
-              <div 
-                className="relative w-full h-full flex items-center justify-center bg-white rounded-2xl p-6"
-                style={{
-                  maskImage: 'radial-gradient(circle at center, black 45%, transparent 75%)',
-                  WebkitMaskImage: 'radial-gradient(circle at center, black 45%, transparent 75%)',
-                }}
-              >
-                <img
-                  src="/images/gas_cylinders.jpg"
-                  alt="Breston Gas Cylinders"
-                  className="object-contain max-h-[380px] max-w-full hover:scale-105 transition-transform duration-500 select-none"
-                />
-              </div>
-            </div>
-          </div>
+          {/* Right Column: Empty (allows background cylinders image to be visible on desktop) */}
+          <div className="hidden lg:block h-[400px]" />
         </div>
       </div>
     </section>
   );
 }
+
 
