@@ -5,21 +5,21 @@ import { CircleCheck as CheckCircle, ArrowRight } from 'lucide-react';
 export default function AboutIntro() {
   return (
     <section className="py-24 relative overflow-hidden bg-brand-blue-900">
-      {/* Background Image Container */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Image Container (Positioned on the side on desktop) */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 z-0">
         <Image
-          src="/images/gas_cylinders.jpg"
+          src="/images/gas_cylinders.png"
           alt="Breston Gas Cylinders background"
           fill
           className="object-cover object-center lg:object-right"
-          sizes="100vw"
+          sizes="(max-w-7xl) 50vw, 100vw"
           priority
         />
-        {/* Bluish transparent gradient overlay to blend into the brand blue theme and ensure readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/95 via-brand-blue-900/85 to-brand-blue-900/60 lg:from-brand-blue-900/98 lg:via-brand-blue-900/85 lg:to-brand-blue-900/45" />
       </div>
+      {/* Bluish transparent gradient overlay to blend into the brand blue theme and ensure readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/95 via-brand-blue-900/85 to-brand-blue-900/60 lg:from-brand-blue-900/98 lg:via-brand-blue-900/85 lg:to-brand-blue-900/45 z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column: Content */}
           <div className="flex flex-col">
