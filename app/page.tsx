@@ -3,13 +3,7 @@ import Image from 'next/image';
 import { Shield, Star, Users, Zap, CircleCheck as CheckCircle, ArrowRight, Heart, Factory, Flame, FlaskConical, UtensilsCrossed, HardHat, Droplets, Building2, GraduationCap, Truck, Package, GitBranch, Wrench, RefreshCw, Award, ThumbsUp, Clock } from 'lucide-react';
 import CTABanner from '@/components/ui/CTABanner';
 import SectionHeading from '@/components/ui/SectionHeading';
-
-const HERO_FEATURES = [
-  { icon: Shield, label: 'Safety Certified' },
-  { icon: Award, label: 'Quality Assured' },
-  { icon: Truck, label: 'Reliable Delivery' },
-  { icon: Clock, label: '24/7 Emergency Support' },
-];
+import HeroCarousel from '@/components/HeroCarousel';
 
 const KEY_OFFERINGS = [
   {
@@ -68,13 +62,6 @@ const INDUSTRIES = [
   { label: 'Education & Research', icon: GraduationCap },
 ];
 
-const STATS = [
-  { value: '9+', label: 'Industries Served' },
-  { value: '100%', label: 'Safety Compliant' },
-  { value: '8', label: 'Product Categories' },
-  { value: '24/7', label: 'Emergency Support' },
-];
-
 const CORE_VALUES = [
   { icon: Shield, title: 'Safety', description: 'Prioritizing health, safety, and well-being in every operation.' },
   { icon: Star, title: 'Integrity', description: 'Honest, ethical, and transparent business conduct.' },
@@ -88,75 +75,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-brand-blue-500 via-brand-blue-700 to-brand-blue-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-brand-green-500 blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-brand-blue-300 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-white blur-3xl" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block bg-brand-green-500/20 text-brand-green-300 border border-brand-green-500/30 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-                {"Uganda's Trusted Gas Solutions Provider"}
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Medical &amp; Industrial
-                <span className="block text-brand-green-400">Gas Solutions</span>
-              </h1>
-              <p className="text-brand-blue-100 text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
-                Providing safe, reliable, and high-quality medical and industrial gases, accessories, and engineering solutions to power healthcare, manufacturing, and critical operations across the region.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-10">
-                <Link
-                  href="/products"
-                  className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-400 text-white px-7 py-3.5 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  View Products <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-7 py-3.5 rounded-lg font-semibold transition-all"
-                >
-                  Request a Quote
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                {HERO_FEATURES.map(({ icon: Icon, label }) => (
-                  <div key={label} className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-brand-green-500/20 flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4 text-brand-green-400" />
-                    </div>
-                    <span className="text-brand-blue-100 text-xs font-medium">{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="hidden lg:flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-brand-green-500/20 rounded-3xl blur-2xl scale-110" />
-                <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                  <Image
-                    src="/Breston_Technologies_logo.jpg"
-                    alt="Breston Technologies Limited"
-                    width={320}
-                    height={320}
-                    className="object-contain"
-                  />
-                  <div className="mt-6 grid grid-cols-2 gap-3">
-                    {STATS.map(({ value, label }) => (
-                      <div key={label} className="bg-white/10 rounded-xl p-3 text-center">
-                        <div className="text-2xl font-bold text-white">{value}</div>
-                        <div className="text-brand-blue-200 text-xs mt-1">{label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* About intro */}
       <section className="py-20 bg-white">
