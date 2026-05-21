@@ -25,12 +25,12 @@ export const NAV_LINKS = [
 ] as const;
 
 export const PRODUCT_CATEGORIES = [
-    { label: 'Ultra/High Purity Gases', href: '/products#purity' },
-    { label: 'Industrial Grade Gases', href: '/products#industrial' },
-    { label: 'Medical Grade Gases', href: '/products#medical' },
-    { label: 'Specialty Gases', href: '/products#specialty' },
-    { label: 'Gas Cylinders', href: '/products#cylinders' },
-    { label: 'Gas Accessories', href: '/products#accessories' },
-    { label: 'Welding Accessories', href: '/products#welding' },
-    { label: 'Dry Ice', href: '/products#dryice' },
+    { label: 'Ultra/High Purity Gases', href: '/products/purity' },
+    { label: 'Industrial Grade Gases', href: '/products/industrial' },
+    { label: 'Medical Grade Gases', href: '/products/medical' },
+    { label: 'Specialty Gases', href: '/products/specialty' },
+    { label: 'Gas Cylinders', href: '/products/cylinders' },
+    { label: 'Gas Accessories', href: '/products/accessories' },
+    { label: 'Welding Accessories', href: '/products/welding' },
+    { label: 'Dry Ice', href: '/products/dryice' },
 ] as const;
