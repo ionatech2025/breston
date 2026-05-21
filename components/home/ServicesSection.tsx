@@ -5,7 +5,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 
 const KEY_OFFERINGS = [
   {
-    image: '/images/home/services/medical_gases.jpg',
+    image: '/images/home/services/medical_gases2.jpg',
     title: 'Medical Gases',
     description: 'Medical oxygen, nitrous oxide, medical air, and Entonox for healthcare facilities, hospitals, and emergency services.',
     accentColor: 'bg-red-500',
@@ -17,13 +17,13 @@ const KEY_OFFERINGS = [
     accentColor: 'bg-brand-blue-500',
   },
   {
-    image: '/images/home/services/high_purity_gases.jpg',
+    image: '/images/home/services/high_purity_gases2.jpg',
     title: 'High Purity Gases',
     description: 'Ultra and high purity gases for laboratories, analytical instruments, calibration, and research applications.',
     accentColor: 'bg-brand-green-500',
   },
   {
-    image: '/images/home/services/cylinder_services.jpg',
+    image: '/images/home/services/cylinder_services.jpeg',
     title: 'Cylinder Services',
     description: 'Cylinder hire, exchange, refilling, and sales with flexible options for short and long-term needs.',
     accentColor: 'bg-amber-500',
