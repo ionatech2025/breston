@@ -30,6 +30,17 @@ export async function generateMetadata({ params }: PageProps) {
     };
 }
 
+const CATEGORY_BANNERS: Record<string, string> = {
+    purity: '/images/home/services/high_purity_gases2.jpg',
+    industrial: '/images/top_banner_images/products_industrial_gases.png',
+    medical: '/images/home/services/medical_gases2.jpg',
+    specialty: '/images/top_banner_images/products_specialty_gases.png',
+    cylinders: '/images/top_banner_images/products_gas_cylinders.png',
+    accessories: '/images/top_banner_images/products_accessories.png',
+    welding: '/images/top_banner_images/products_welding.png',
+    dryice: '/images/top_banner_images/products_dryice.png',
+};
+
 export default async function ProductCategoryPage({ params }: PageProps) {
     const { category } = await params;
     const currentCategory = PRODUCT_CATEGORIES.find((c) => c.id === category);
@@ -41,11 +52,15 @@ export default async function ProductCategoryPage({ params }: PageProps) {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section className="bg-gradient-to-r from-brand-blue-500 to-brand-blue-800 py-16">
-                <div className="max-w-7xl mx-auto px-4 text-center">
+            <section 
+                className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"
+                style={{ backgroundImage: `url('${CATEGORY_BANNERS[currentCategory.id] || "/images/top_banner_images/services.png"}')` }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/80 to-brand-blue-700/80" />
+                <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
                     <span className="inline-block text-brand-green-300 font-semibold text-sm uppercase tracking-widest mb-3">Product Catalogue</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{currentCategory.title}</h1>
-                    <p className="text-brand-blue-100 text-lg max-w-2xl mx-auto">
+                    <p className="text-brand-blue-100 text-lg max-w-2xl mx-auto font-medium">
                         {currentCategory.subtitle}
                     </p>
                 </div>
