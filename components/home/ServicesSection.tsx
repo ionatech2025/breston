@@ -70,7 +70,7 @@ export default function ServicesSection() {
                 {/* Subtle colored accent strip at the bottom of the image */}
                 <div className={`absolute bottom-0 left-0 right-0 h-1 ${accentColor}`} />
               </div>
-              
+
               {/* Text details below */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-brand-blue-600 transition-colors">
@@ -79,19 +79,16 @@ export default function ServicesSection() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                   {description}
                 </p>
-                <div className="mt-auto pt-2 flex items-center text-brand-blue-500 font-semibold text-xs group-hover:text-brand-blue-700 transition-colors">
-                  Learn More <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform" />
-                </div>
               </div>
             </div>
           ))}
         </div>
         <div className="text-center mt-12">
           <Link
-            href="/products"
+            href="/services"
             className="inline-flex items-center gap-2 bg-white text-brand-blue-700 hover:bg-brand-blue-50 px-8 py-3.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 border border-white/20"
           >
-            Explore All Products <ArrowRight className="w-4 h-4" />
+            Explore All Services <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
