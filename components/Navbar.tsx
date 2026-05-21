@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import logo from '../app/Breston Technologies logo.jpg';
+import logo from '@/public/Breston_Technologies_logo_nobg.png';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -26,7 +26,7 @@ export default function Navbar() {
             <span className="sr-only">Breston Technologies</span>
             <Image
               className="h-10 w-auto rounded"
-              src={logo}
+              src="/Breston_Technologies_logo_nobg.jpg"
               alt="Breston Technologies"
               height={40}
               width={40}
