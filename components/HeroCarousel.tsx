@@ -28,7 +28,7 @@ const HERO_FEATURES = [
 ];
 
 const STATS = [
-  { value: '9+', label: 'Industries Served' },
+  { value: '45+', label: 'Industries Served' },
   { value: '100%', label: 'Safety Compliant' },
   { value: '8', label: 'Product Categories' },
   { value: '24/7', label: 'Emergency Support' },
@@ -51,9 +51,8 @@ export default function HeroCarousel() {
         {CAROUSEL_IMAGES.map((image, index) => (
           <div
             key={image.src}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <Image
               src={image.src}
@@ -64,7 +63,7 @@ export default function HeroCarousel() {
             />
           </div>
         ))}
-        
+
         {/* Rich gradient overlay keeping the logo's signature blue (brand-blue-500) but transparent enough to see the images */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-500/70 via-brand-blue-900/60 to-brand-blue-900/35 lg:from-brand-blue-500/75 lg:via-brand-blue-900/55 lg:to-brand-blue-900/25" />
         <div className="absolute inset-0 bg-black/25" />
@@ -135,11 +134,10 @@ export default function HeroCarousel() {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentIndex 
-                ? 'bg-brand-green-400 w-8' 
+            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${index === currentIndex
+                ? 'bg-brand-green-400 w-8'
                 : 'bg-white/40 hover:bg-white/70 w-2.5'
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
