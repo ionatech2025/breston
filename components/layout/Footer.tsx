@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Clock, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, Clock, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { BRAND, NAV_LINKS } from '@/lib/constants';
 
 const Facebook = (props: any) => (
@@ -105,9 +105,32 @@ export default function Footer() {
                             </li>
                             <li className="flex gap-3">
                                 <Phone className="w-4 h-4 text-brand-green-400 shrink-0 mt-0.5" />
-                                <div className="space-y-1">
-                                    <a href={`tel:${BRAND.phone1}`} className="block hover:text-brand-green-400 transition-colors">{BRAND.phone1}</a>
-                                    <a href={`tel:${BRAND.phone2}`} className="block hover:text-brand-green-400 transition-colors">{BRAND.phone2}</a>
+                                <div className="flex flex-wrap items-center gap-1.5">
+                                    <a href={`tel:${BRAND.phone1}`} className="hover:text-brand-green-400 transition-colors">{BRAND.phone1}</a>
+                                    <span className="text-brand-blue-400">|</span>
+                                    <a href={`tel:${BRAND.phone2}`} className="hover:text-brand-green-400 transition-colors">{BRAND.phone2}</a>
+                                </div>
+                            </li>
+                            <li className="flex gap-3">
+                                <MessageCircle className="w-4 h-4 text-brand-green-400 shrink-0 mt-0.5" />
+                                <div className="flex flex-wrap items-center gap-1.5">
+                                    <a
+                                        href={`https://wa.me/${BRAND.whatsapp.replace(/[^\d]/g, '')}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-brand-green-400 transition-colors"
+                                    >
+                                        {BRAND.whatsapp}
+                                    </a>
+                                    <span className="text-brand-blue-400">|</span>
+                                    <a
+                                        href={`https://wa.me/${BRAND.phone1.replace(/[^\d]/g, '')}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-brand-green-400 transition-colors"
+                                    >
+                                        {BRAND.phone1}
+                                    </a>
                                 </div>
                             </li>
                             <li className="flex gap-3">
