@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ProductCard from '@/components/ui/ProductCard';
 import CTABanner from '@/components/ui/CTABanner';
+import CylinderWarning from '@/components/ui/CylinderWarning';
 import { PRODUCT_CATEGORIES } from '@/lib/data/products';
 import { cn } from '@/lib/utils';
 
@@ -130,6 +131,9 @@ export default async function ProductCategoryPage({ params }: PageProps) {
             </section>
 
             <CTABanner />
+            {['purity', 'industrial', 'medical', 'specialty', 'cylinders', 'welding'].includes(currentCategory.id) && (
+                <CylinderWarning />
+            )}
         </main>
     );
 }
