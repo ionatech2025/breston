@@ -38,8 +38,12 @@ export default function AboutPage() {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section className="bg-gradient-to-r from-brand-blue-500 to-brand-blue-800 py-20">
-                <div className="max-w-7xl mx-auto px-4 text-center">
+            <section 
+                className="relative bg-cover bg-center bg-no-repeat py-20"
+                style={{ backgroundImage: "url('/images/top_banner_images/aboutus.png')" }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/80 to-brand-blue-700/80" />
+                <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
                     <span className="inline-block text-brand-green-300 font-semibold text-sm uppercase tracking-widest mb-3">Our Story</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">About Breston Technologies</h1>
                     <p className="text-brand-blue-100 text-lg max-w-2xl mx-auto">
