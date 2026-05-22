@@ -11,19 +11,23 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
     const image = hasImage ? row[0] : '/images/placeholder.png';
     const startIdx = hasImage ? 1 : 0;
     const title = row[startIdx];
-    
+
     // Extract details excluding the image and the title
     const details = columns.slice(startIdx + 1).map((col, idx) => ({
         label: col,
         value: row[startIdx + 1 + idx]
     })).filter(detail => detail.value); // Only show non-empty details
 
+    const formulaDetail = details.find(d => d.label === 'Chemical Formula');
+    const casDetail = details.find(d => d.label === 'CAS Number');
+    const remainingDetails = details.filter(d => d.label !== 'Chemical Formula' && d.label !== 'CAS Number');
+
     return (
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col h-full group">
             <div className="relative h-56 bg-gray-50 overflow-hidden">
-                <img 
-                    src={image} 
-                    alt={title} 
+                <img
+                    src={image}
+                    alt={title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 right-3">
@@ -32,27 +36,42 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
                     </span>
                 </div>
             </div>
-            
+
             <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue-600 transition-colors">
-                    {title}
-                </h3>
-                
+                {!(formulaDetail || casDetail) ? (
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue-600 transition-colors">
+                        {title}
+                    </h3>
+                ) : (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {formulaDetail && (
+                            <span className="inline-flex items-center bg-brand-blue-50 text-brand-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md border border-brand-blue-100">
+                                Formula: {formulaDetail.value}
+                            </span>
+                        )}
+                        {casDetail && (
+                            <span className="inline-flex items-center bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-md border border-gray-200">
+                                CAS: {casDetail.value}
+                            </span>
+                        )}
+                    </div>
+                )}
+
                 <div className="space-y-2.5 mb-6 flex-1">
-                    {details.map(({ label, value }) => (
+                    {remainingDetails.map(({ label, value }) => (
                         <div key={label} className="text-sm flex flex-col">
                             <span className="font-semibold text-gray-500 text-xs uppercase tracking-wider">{label}</span>
                             <span className="text-gray-700 line-clamp-2">{value}</span>
                         </div>
                     ))}
                 </div>
-                
-                <Link 
+
+                <Link
                     href={`/contact?product=${encodeURIComponent(title)}`}
                     className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-400 text-white px-5 py-3 rounded-lg font-semibold transition-all hover:shadow-md active:scale-95"
                 >
                     <ShoppingCart className="w-4 h-4" />
-                    Buy / Request Quote
+                    Get Price and Availability
                 </Link>
             </div>
         </div>
