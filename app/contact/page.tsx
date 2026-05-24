@@ -28,7 +28,7 @@ const CONTACT_CARDS = [
     {
         icon: MessageCircle,
         title: 'WhatsApp',
-        lines: [BRAND.whatsapp],
+        lines: [BRAND.whatsapp, BRAND.phone1],
         href: `https://wa.me/256777014310`,
         color: 'text-teal-500',
         bg: 'bg-teal-50',
