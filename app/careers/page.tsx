@@ -106,12 +106,12 @@ export default function CareersPage() {
                     <p className="text-brand-blue-100 text-lg max-w-2xl mx-auto mb-8">
                         Be part of a growing company building reliable medical and industrial gas solutions that power hospitals, laboratories, manufacturers, and critical infrastructure across the region.
                     </p>
-                    <a
-                        href={`mailto:${BRAND.careersEmail}`}
+                    <Link
+                        href="/contact"
                         className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-400 text-white px-7 py-3.5 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <Mail className="w-4 h-4" /> Apply Now
-                    </a>
+                    </Link>
                 </div>
             </section>
 
@@ -183,12 +183,12 @@ export default function CareersPage() {
                                             </div>
                                         </div>
                                         <div className="mt-6 pt-6 border-t border-gray-100">
-                                            <a
-                                                href={`mailto:${BRAND.careersEmail}?subject=Application: ${title}`}
+                                            <Link
+                                                href="/contact"
                                                 className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors"
                                             >
                                                 <Mail className="w-4 h-4" /> Apply for This Role
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +229,7 @@ export default function CareersPage() {
                 </div>
             </section>
 
-            <CTABanner title="Questions About Working With Us?" subtitle="Reach out to our team and we will be happy to answer any questions about career opportunities at Breston Technologies." ctaLabel="Apply Now" ctaHref={`mailto:${BRAND.careersEmail}`} />
+            <CTABanner title="Questions About Working With Us?" subtitle="Reach out to our team and we will be happy to answer any questions about career opportunities at Breston Technologies." ctaLabel="Apply Now" ctaHref="/contact" />
         </main>
     );
 }
