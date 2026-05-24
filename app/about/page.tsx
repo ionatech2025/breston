@@ -76,23 +76,23 @@ export default function AboutPage() {
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <img
-                                src="https://images.pexels.com/photos/3825572/pexels-photo-3825572.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Gas cylinders"
+                                src="/images/Product category/Landscape/medical_gases.png"
+                                alt="Medical gas solutions"
                                 className="rounded-2xl object-cover w-full h-56"
                             />
                             <img
-                                src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Hospital setting"
+                                src="/images/Product category/Landscape/industrial_grade_gases.png"
+                                alt="Industrial grade gases"
                                 className="rounded-2xl object-cover w-full h-56 mt-6"
                             />
                             <img
-                                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Laboratory"
+                                src="/images/Product category/Landscape/high_purity_gases.png"
+                                alt="High purity gases"
                                 className="rounded-2xl object-cover w-full h-48"
                             />
                             <img
-                                src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Industrial operations"
+                                src="/images/Product category/Landscape/gas_cylinders.png"
+                                alt="Gas cylinders"
                                 className="rounded-2xl object-cover w-full h-48 mt-4"
                             />
                         </div>
