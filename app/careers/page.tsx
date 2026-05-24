@@ -229,7 +229,7 @@ export default function CareersPage() {
                 </div>
             </section>
 
-            <CTABanner title="Questions About Working With Us?" subtitle="Reach out to our team and we will be happy to answer any questions about career opportunities at Breston Technologies." />
+            <CTABanner title="Questions About Working With Us?" subtitle="Reach out to our team and we will be happy to answer any questions about career opportunities at Breston Technologies." ctaLabel="Apply Now" ctaHref={`mailto:${BRAND.careersEmail}`} />
         </main>
     );
 }

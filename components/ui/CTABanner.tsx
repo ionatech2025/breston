@@ -5,11 +5,15 @@ import { BRAND } from '@/lib/constants';
 interface CTABannerProps {
     title?: string;
     subtitle?: string;
+    ctaLabel?: string;
+    ctaHref?: string;
 }
 
 export default function CTABanner({
     title = 'Ready to Get Started?',
     subtitle = 'Contact our team for product inquiries, technical consultation, bulk supply solutions, or cylinder hire services.',
+    ctaLabel = 'Request a Quote',
+    ctaHref = '/contact',
 }: CTABannerProps) {
     return (
         <section className="bg-gradient-to-r from-brand-blue-500 to-brand-blue-800 py-16">
@@ -18,10 +22,10 @@ export default function CTABanner({
                 <p className="text-brand-blue-100 text-lg mb-8 max-w-2xl mx-auto">{subtitle}</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
-                        href="/contact"
+                        href={ctaHref}
                         className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-400 text-white px-8 py-3.5 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-0.5"
                     >
-                        Request a Quote
+                        {ctaLabel}
                     </Link>
                     <a
                         href={`tel:${BRAND.phone1}`}
