@@ -74,26 +74,11 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="relative h-full min-h-[420px]">
                             <img
-                                src="https://images.pexels.com/photos/3825572/pexels-photo-3825572.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Gas cylinders"
-                                className="rounded-2xl object-cover w-full h-56"
-                            />
-                            <img
-                                src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Hospital setting"
-                                className="rounded-2xl object-cover w-full h-56 mt-6"
-                            />
-                            <img
-                                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Laboratory"
-                                className="rounded-2xl object-cover w-full h-48"
-                            />
-                            <img
-                                src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400"
-                                alt="Industrial operations"
-                                className="rounded-2xl object-cover w-full h-48 mt-4"
+                                src="/images/Product category/Landscape/gas_cylinders.png"
+                                alt="Breston Technologies gas cylinders and products"
+                                className="rounded-2xl object-cover w-full h-full absolute inset-0"
                             />
                         </div>
                     </div>
@@ -113,14 +98,18 @@ export default function AboutPage() {
                                 To become the leading and most trusted provider of medical and industrial gas solutions recognized for quality, safety, innovation, and exceptional customer service across the region.
                             </p>
                         </div>
-                        <div className="bg-gradient-to-br from-brand-green-500 to-brand-green-700 rounded-2xl p-8 text-white">
-                            <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
-                                <Target className="w-6 h-6 text-white" />
+                        <div className="relative bg-gradient-to-br from-brand-green-500 to-brand-green-700 rounded-2xl p-8 text-white overflow-hidden">
+                            {/* subtle dark overlay to boost contrast across the lighter gradient areas */}
+                            <div className="absolute inset-0 bg-black/20 rounded-2xl pointer-events-none" />
+                            <div className="relative z-10">
+                                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
+                                    <Target className="w-6 h-6 text-white" />
+                                </div>
+                                <h2 className="text-2xl font-bold mb-4 drop-shadow-md">Our Mission</h2>
+                                <p className="text-white leading-relaxed text-lg drop-shadow-sm">
+                                    To provide safe, reliable, and high-quality medical and industrial gas products, accessories, and engineering solutions that empower healthcare providers, industries, and businesses to operate efficiently and sustainably.
+                                </p>
                             </div>
-                            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-                            <p className="text-green-50 leading-relaxed text-lg">
-                                To provide safe, reliable, and high-quality medical and industrial gas products, accessories, and engineering solutions that empower healthcare providers, industries, and businesses to operate efficiently and sustainably.
-                            </p>
                         </div>
                     </div>
                 </div>

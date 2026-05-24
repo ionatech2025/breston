@@ -28,7 +28,7 @@ const CONTACT_CARDS = [
     {
         icon: MessageCircle,
         title: 'WhatsApp',
-        lines: [BRAND.whatsapp],
+        lines: [BRAND.whatsapp, BRAND.phone1],
         href: `https://wa.me/256777014310`,
         color: 'text-teal-500',
         bg: 'bg-teal-50',
@@ -37,7 +37,7 @@ const CONTACT_CARDS = [
         icon: MapPin,
         title: 'Location',
         lines: ['Gayaza - Kampala Road', 'Kanyanya, Kampala, Uganda'],
-        href: 'https://maps.google.com/?q=Kanyanya+Kampala+Uganda',
+        href: 'https://maps.app.goo.gl/M593fo8rvtRTG6qS9',
         color: 'text-orange-500',
         bg: 'bg-orange-50',
     },
@@ -47,7 +47,7 @@ export default function ContactPage() {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section 
+            <section
                 className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"
                 style={{ backgroundImage: "url('/images/top_banner_images/contactus.png')" }}
             >
@@ -86,19 +86,28 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Form + info */}
+            {/* Map + Form + Info */}
             <section className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid lg:grid-cols-5 gap-10">
-                        {/* Form */}
-                        <div className="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
-                            <p className="text-gray-600 mb-7">Fill in the form and our team will respond promptly.</p>
-                            <ContactForm />
-                        </div>
 
-                        {/* Info sidebar */}
-                        <div className="lg:col-span-2 space-y-6">
+                        {/* Left column: map + sidebar info */}
+                        <div className="lg:col-span-2 flex flex-col gap-6">
+
+                            {/* Map */}
+                            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-72 lg:h-80 bg-gray-200">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7345711778967!2d32.5741864!3d0.3712377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb359dc3b40d%3A0x3566af5c608eb9de!2sBreston%20Technologies%20Limited!5e0!3m2!1sen!2sug!4v1716560000000!5m2!1sen!2sug"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Breston Technologies Location – Kanyanya, Gayaza Road, Kampala"
+                                />
+                            </div>
+
                             {/* Working hours */}
                             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                                 <div className="flex items-center gap-3 mb-4">
@@ -165,22 +174,16 @@ export default function ContactPage() {
                                 </ul>
                             </div>
                         </div>
+
+                        {/* Right column: contact form */}
+                        <div className="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
+                            <p className="text-gray-600 mb-7">Fill in the form and our team will respond promptly.</p>
+                            <ContactForm />
+                        </div>
+
                     </div>
                 </div>
-            </section>
-
-            {/* Map */}
-            <section className="h-96 bg-gray-200 relative overflow-hidden">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7486!2d32.5649!3d0.3791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb1234abcdef%3A0x1234567890abcdef!2sKanyanya%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1620000000000!5m2!1sen!2sug"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Breston Technologies Location"
-                />
             </section>
         </main>
     );
