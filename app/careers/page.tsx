@@ -34,7 +34,7 @@ const WHY_US = [
 
 const ROLES = [
     {
-        icon: Truck,
+        image: '/images/careers/trucker_drivers.png',
         title: 'Drivers & Logistics',
         department: 'Operations',
         description: 'Responsible and safety-conscious drivers to support our transportation and delivery operations across Uganda.',
@@ -53,7 +53,7 @@ const ROLES = [
         ],
     },
     {
-        icon: Users,
+        image: '/images/careers/sales&customer_services.png',
         title: 'Sales & Customer Service',
         department: 'Commercial',
         description: 'Help clients identify the right products and solutions for their operations, and build lasting relationships.',
@@ -72,7 +72,7 @@ const ROLES = [
         ],
     },
     {
-        icon: GraduationCap,
+        image: '/images/careers/breston_early_opportunities.png',
         title: 'Early Career Opportunities',
         department: 'Various',
         description: 'We welcome students, recent graduates, and early-career professionals looking to grow in a dynamic industry.',
@@ -95,7 +95,7 @@ export default function CareersPage() {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section 
+            <section
                 className="relative bg-cover bg-center bg-no-repeat py-20"
                 style={{ backgroundImage: "url('/images/top_banner_images/careers.png')" }}
             >
@@ -124,11 +124,8 @@ export default function CareersPage() {
                         subtitle="We invest in our people and create an environment where careers thrive."
                     />
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {WHY_US.map(({ icon: Icon, title, description }) => (
+                        {WHY_US.map(({ title, description }) => (
                             <div key={title} className="text-center p-6 rounded-2xl bg-gray-50 hover:bg-brand-blue-50 hover:shadow-md transition-all">
-                                <div className="w-14 h-14 rounded-2xl bg-brand-blue-100 flex items-center justify-center mx-auto mb-4">
-                                    <Icon className="w-7 h-7 text-brand-blue-500" />
-                                </div>
                                 <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
                             </div>
@@ -146,15 +143,19 @@ export default function CareersPage() {
                         subtitle="We are always looking for talented, safety-conscious, and customer-focused individuals to join our growing team."
                     />
                     <div className="space-y-8">
-                        {ROLES.map(({ icon: Icon, title, department, description, responsibilities, requirements }) => (
+                        {ROLES.map(({ image, title, department, description, responsibilities, requirements }) => (
                             <div key={title} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
                                 <div className="flex flex-col md:flex-row">
-                                    <div className="bg-gradient-to-br from-brand-blue-500 to-brand-blue-700 p-8 flex flex-col items-center justify-center text-center md:w-56 shrink-0">
-                                        <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-3">
-                                            <Icon className="w-7 h-7 text-white" />
+                                    <div
+                                        className="relative p-8 flex flex-col items-center justify-center text-center md:w-56 shrink-0 overflow-hidden"
+                                        style={{ backgroundImage: `url('${image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                    >
+                                        {/* blue overlay to keep text legible over the photo */}
+                                        <div className="absolute inset-0 bg-brand-blue-800/70" />
+                                        <div className="relative z-10 flex flex-col items-center">
+                                            <h3 className="font-bold text-white text-lg leading-tight">{title}</h3>
+                                            <span className="mt-2 text-xs text-brand-blue-200 bg-white/10 px-3 py-1 rounded-full">{department}</span>
                                         </div>
-                                        <h3 className="font-bold text-white text-lg leading-tight">{title}</h3>
-                                        <span className="mt-2 text-xs text-brand-blue-200 bg-white/10 px-3 py-1 rounded-full">{department}</span>
                                     </div>
                                     <div className="p-8 flex-1">
                                         <p className="text-gray-600 leading-relaxed mb-6">{description}</p>
