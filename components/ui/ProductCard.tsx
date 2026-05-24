@@ -60,7 +60,7 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
                 <div className="space-y-2.5 mb-6 flex-1">
                     {remainingDetails.map(({ label, value }) => (
                         <div key={label} className="text-sm flex flex-col">
-                            <span className="font-semibold text-gray-500 text-xs uppercase tracking-wider">{label}</span>
+                            <span className="font-bold text-gray-800 text-xs uppercase tracking-wider">{label}</span>
                             <span className="text-gray-700 line-clamp-2">{value}</span>
                         </div>
                     ))}
