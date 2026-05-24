@@ -74,26 +74,11 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <img
-                                src="/images/Product category/Landscape/medical_gases.png"
-                                alt="Medical gas solutions"
-                                className="rounded-2xl object-cover w-full h-56"
-                            />
-                            <img
-                                src="/images/Product category/Landscape/industrial_grade_gases.png"
-                                alt="Industrial grade gases"
-                                className="rounded-2xl object-cover w-full h-56 mt-6"
-                            />
-                            <img
-                                src="/images/Product category/Landscape/high_purity_gases.png"
-                                alt="High purity gases"
-                                className="rounded-2xl object-cover w-full h-48"
-                            />
+                        <div className="relative h-full min-h-[420px]">
                             <img
                                 src="/images/Product category/Landscape/gas_cylinders.png"
-                                alt="Gas cylinders"
-                                className="rounded-2xl object-cover w-full h-48 mt-4"
+                                alt="Breston Technologies gas cylinders and products"
+                                className="rounded-2xl object-cover w-full h-full absolute inset-0"
                             />
                         </div>
                     </div>
