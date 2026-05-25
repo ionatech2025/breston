@@ -32,7 +32,7 @@ export default function AboutIntro() {
             </div>
 
             {/* Heading matching screenshot layout */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] tracking-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] tracking-tight">
               Powering <br /> Healthcare <br /> &amp; <span className="text-brand-green-400 italic font-serif font-normal">Industry</span> <br /> with Trusted Gas Solutions
             </h2>
 

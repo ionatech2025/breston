@@ -35,7 +35,7 @@ export default function CylinderWarning() {
         <div className="fixed bottom-6 right-6 z-50">
             {/* Detailed Expanded Card */}
             <div
-                className={`absolute bottom-0 right-0 w-80 md:w-96 bg-white rounded-2xl border border-gray-200/80 shadow-xl p-5 transition-all duration-300 ease-out origin-bottom-right transform ${
+                className={`absolute bottom-0 right-0 w-[calc(100vw-3rem)] max-w-sm md:max-w-[24rem] bg-white rounded-2xl border border-gray-200/80 shadow-xl p-5 transition-all duration-300 ease-out origin-bottom-right transform ${
                     isExpanded
                         ? 'opacity-100 scale-100 translate-y-0'
                         : 'opacity-0 scale-75 translate-y-4 pointer-events-none'

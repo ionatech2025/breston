@@ -43,7 +43,7 @@ export default function IndustriesSection() {
           {INDUSTRIES.map(({ label, icon: Icon }) => (
             <div
               key={label}
-              className="flex flex-col items-center gap-4 p-6 rounded-2xl border border-white/80 bg-white/75 backdrop-blur-[8px] hover:bg-white/95 hover:border-brand-blue-500 hover:shadow-xl hover:shadow-brand-blue-900/10 hover:-translate-y-1 transition-all duration-300 group cursor-default min-w-[130px] w-[180px] max-w-[200px]"
+              className="flex flex-col items-center gap-4 p-6 rounded-2xl border border-white/80 bg-white/75 backdrop-blur-[8px] hover:bg-white/95 hover:border-brand-blue-500 hover:shadow-xl hover:shadow-brand-blue-900/10 hover:-translate-y-1 transition-all duration-300 group cursor-default flex-1 basis-[140px] max-w-[200px]"
             >
               <div className="w-14 h-14 rounded-2xl bg-brand-blue-50/90 border border-brand-blue-100/50 group-hover:bg-brand-blue-900 flex items-center justify-center transition-all duration-300 shadow-inner group-hover:scale-110">
                 <Icon className="w-7 h-7 text-brand-blue-900 group-hover:text-white transition-colors duration-300" />

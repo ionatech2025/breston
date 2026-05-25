@@ -36,7 +36,7 @@ const QUALITY_POLICIES = [
 
 export default function AboutPage() {
     return (
-        <main className="pt-[88px]">
+        <main className="pt-[60px] md:pt-[88px]">
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-20"
@@ -53,9 +53,9 @@ export default function AboutPage() {
             </section>
 
             {/* Background */}
-            <section className="py-20 bg-white">
+            <section className="py-14 md:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                         <div>
                             <SectionHeading
                                 label="Our Background"
@@ -74,11 +74,11 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                        <div className="relative h-full min-h-[420px]">
+                        <div className="rounded-2xl overflow-hidden shadow-lg">
                             <img
                                 src="/images/about/about.jpg"
-                                alt="Breston Technologies gas cylinders and products"
-                                className="rounded-2xl object-cover w-full h-full absolute inset-0"
+                                alt="Breston Technologies — people, facilities, medical gases, delivery fleet, and industrial solutions"
+                                className="w-full h-auto block"
                             />
                         </div>
                     </div>
@@ -116,14 +116,14 @@ export default function AboutPage() {
             </section>
 
             {/* Core Values */}
-            <section className="py-20 bg-white">
+            <section className="py-14 md:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
                     <SectionHeading
                         label="What We Stand For"
                         title="Our Core Values"
                         subtitle="These values guide every decision, interaction, and operation at Breston Technologies Limited."
                     />
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {CORE_VALUES.map(({ icon: Icon, title, description }) => (
                             <div key={title} className="p-6 rounded-2xl border border-gray-100 hover:border-brand-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all bg-white">
                                 <div className="w-12 h-12 rounded-xl bg-brand-blue-50 flex items-center justify-center mb-4">

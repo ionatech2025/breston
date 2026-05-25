@@ -76,7 +76,7 @@ export default function HeroCarousel() {
             <span className="inline-block bg-brand-green-500/20 text-brand-green-300 border border-brand-green-500/30 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 backdrop-blur-xs">
               {"Uganda's Trusted Gas Solutions Provider"}
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-sm">
               Medical &amp; Industrial
               <span className="block text-brand-green-400">Gas Solutions</span>
             </h1>
@@ -129,7 +129,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
         {CAROUSEL_IMAGES.map((_, index) => (
           <button
             key={index}

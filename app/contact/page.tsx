@@ -45,7 +45,7 @@ const CONTACT_CARDS = [
 
 export default function ContactPage() {
     return (
-        <main className="pt-[88px]">
+        <main className="pt-[60px] md:pt-[88px]">
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"

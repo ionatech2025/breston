@@ -90,7 +90,7 @@ const SAFETY_AREAS = [
 
 export default function ServicesPage() {
     return (
-        <main className="pt-[88px]">
+        <main className="pt-[60px] md:pt-[88px]">
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"
@@ -139,7 +139,7 @@ export default function ServicesPage() {
             {/* Cylinder Hire highlight */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="bg-gradient-to-br from-brand-blue-50 to-brand-green-50 rounded-3xl p-10 md:p-14">
+                    <div className="bg-gradient-to-br from-brand-blue-50 to-brand-green-50 rounded-3xl p-6 sm:p-10 md:p-14">
                         <div className="grid md:grid-cols-2 gap-10 items-center">
                             <div>
                                 <span className="inline-block text-brand-green-600 font-semibold text-sm uppercase tracking-widest mb-3">Flexible Solutions</span>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                                 Learn About Our Values <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {SAFETY_AREAS.map((area) => (
                                 <div key={area} className="bg-white/10 rounded-xl p-4 flex items-start gap-3 border border-white/10">
                                     <Shield className="w-5 h-5 text-brand-green-400 shrink-0 mt-0.5" />

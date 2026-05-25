@@ -22,7 +22,7 @@ export default function SectionHeading({
     subtitleClassName,
 }: SectionHeadingProps) {
     return (
-        <div className={cn('mb-12', centered && 'text-center')}>
+        <div className={cn('mb-8 md:mb-12', centered && 'text-center')}>
             {label && (
                 <span className={cn(
                     'inline-block text-brand-green-500 font-semibold text-sm uppercase tracking-widest mb-3',
