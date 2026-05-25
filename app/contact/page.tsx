@@ -91,7 +91,7 @@ export default function ContactPage() {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid lg:grid-cols-5 gap-10">
 
-                        {/* Left column: map + sidebar info */}
+                        {/* Left column: map + quick service reference */}
                         <div className="lg:col-span-2 flex flex-col gap-6">
 
                             {/* Map */}
@@ -106,52 +106,6 @@ export default function ContactPage() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Breston Technologies Location – Kanyanya, Gayaza Road, Kampala"
                                 />
-                            </div>
-
-                            {/* Working hours */}
-                            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="w-10 h-10 rounded-xl bg-brand-blue-50 flex items-center justify-center">
-                                        <Clock className="w-5 h-5 text-brand-blue-500" />
-                                    </div>
-                                    <h3 className="font-bold text-gray-900">Working Hours</h3>
-                                </div>
-                                <div className="space-y-3 text-sm">
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Monday – Friday</span>
-                                        <span className="font-medium text-gray-900">8:30 AM – 6:00 PM</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Saturday</span>
-                                        <span className="font-medium text-gray-900">8:30 AM – 3:00 PM</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Sunday &amp; Holidays</span>
-                                        <span className="text-gray-400">Closed</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Emergency support */}
-                            <div className="bg-red-50 rounded-2xl border border-red-100 p-6">
-                                <div className="flex items-start gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
-                                        <AlertTriangle className="w-5 h-5 text-red-500" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 mb-1">Emergency Support</h3>
-                                        <p className="text-sm text-gray-600">
-                                            For urgent medical gas supply or emergency support requests, contact us directly by phone.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a
-                                    href={`tel:${BRAND.phone1}`}
-                                    className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors w-full mt-2"
-                                >
-                                    <Phone className="w-4 h-4" />
-                                    Emergency Line: {BRAND.phone1}
-                                </a>
                             </div>
 
                             {/* Quick services */}
@@ -175,11 +129,62 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        {/* Right column: contact form */}
-                        <div className="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
-                            <p className="text-gray-600 mb-7">Fill in the form and our team will respond promptly.</p>
-                            <ContactForm />
+                        {/* Right column: Working Hours → Form → Emergency Support */}
+                        <div className="lg:col-span-3 flex flex-col gap-6">
+
+                            {/* Working hours — top bread */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 rounded-xl bg-brand-blue-50 flex items-center justify-center">
+                                        <Clock className="w-5 h-5 text-brand-blue-500" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900">Working Hours</h3>
+                                </div>
+                                <div className="grid sm:grid-cols-3 gap-4 text-sm">
+                                    <div className="flex flex-col items-center text-center bg-brand-blue-50 rounded-xl py-3 px-4">
+                                        <span className="text-gray-500 mb-1">Monday – Friday</span>
+                                        <span className="font-semibold text-gray-900">8:30 AM – 6:00 PM</span>
+                                    </div>
+                                    <div className="flex flex-col items-center text-center bg-brand-blue-50 rounded-xl py-3 px-4">
+                                        <span className="text-gray-500 mb-1">Saturday</span>
+                                        <span className="font-semibold text-gray-900">8:30 AM – 3:00 PM</span>
+                                    </div>
+                                    <div className="flex flex-col items-center text-center bg-gray-100 rounded-xl py-3 px-4">
+                                        <span className="text-gray-500 mb-1">Sunday &amp; Holidays</span>
+                                        <span className="font-semibold text-gray-400">Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Contact form — the filling */}
+                            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
+                                <p className="text-gray-600 mb-7">Fill in the form and our team will respond promptly.</p>
+                                <ContactForm />
+                            </div>
+
+                            {/* Emergency support — bottom bread */}
+                            <div className="bg-red-50 rounded-2xl border border-red-100 p-6">
+                                <div className="flex items-start gap-3 mb-3">
+                                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
+                                        <AlertTriangle className="w-5 h-5 text-red-500" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Emergency Support</h3>
+                                        <p className="text-sm text-gray-600">
+                                            For urgent medical gas supply or emergency support requests, contact us directly by phone.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a
+                                    href={`tel:${BRAND.phone1}`}
+                                    className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors w-full mt-2"
+                                >
+                                    <Phone className="w-4 h-4" />
+                                    Emergency Line: {BRAND.phone1}
+                                </a>
+                            </div>
+
                         </div>
 
                     </div>

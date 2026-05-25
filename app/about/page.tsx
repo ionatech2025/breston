@@ -38,7 +38,7 @@ export default function AboutPage() {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section 
+            <section
                 className="relative bg-cover bg-center bg-no-repeat py-20"
                 style={{ backgroundImage: "url('/images/top_banner_images/aboutus.png')" }}
             >
@@ -76,7 +76,7 @@ export default function AboutPage() {
                         </div>
                         <div className="relative h-full min-h-[420px]">
                             <img
-                                src="/images/Product category/Landscape/gas_cylinders.png"
+                                src="/images/about/about.jpg"
                                 alt="Breston Technologies gas cylinders and products"
                                 className="rounded-2xl object-cover w-full h-full absolute inset-0"
                             />
