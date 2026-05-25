@@ -45,13 +45,20 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
                 ) : (
                     <div className="flex flex-wrap gap-2 mb-4">
                         {formulaDetail && (
-                            <span className="inline-flex items-center bg-brand-blue-50 text-brand-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md border border-brand-blue-100">
-                                Formula: {formulaDetail.value}
+                            <span className="inline-flex items-center gap-1 bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-md border border-gray-200">
+                                <span className="bg-brand-blue-100 text-brand-blue-700 px-1.5 py-0.5 rounded">
+                                    Formula
+                                </span>
+                                {formulaDetail.value}
                             </span>
+
                         )}
                         {casDetail && (
-                            <span className="inline-flex items-center bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-md border border-gray-200">
-                                CAS: {casDetail.value}
+                            <span className="inline-flex items-center gap-1 bg-gray-50 text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-md border border-gray-200">
+                                <span className="bg-brand-blue-100 text-brand-blue-700 px-1.5 py-0.5 rounded">
+                                    CAS
+                                </span>
+                                {casDetail.value}
                             </span>
                         )}
                     </div>

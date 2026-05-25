@@ -39,8 +39,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             ['/images/Individual gases/medical_oxygen.png', 'Medical Oxygen', 'O₂', '7782-44-7', 'Colorless, odorless gas; supports respiration', 'Medical grade', '≥99.5% O₂', 'Medical cylinders, portable cylinders, high-capacity cylinders, manifold systems', 'Patient oxygen therapy, emergency care, ICU, operating theatres, anesthesia support'],
             ['/images/Individual gases/medical_air.png', 'Medical Air', 'Medical-grade compressed air', '132259-10-0', 'Clean, dry compressed air for medical use', 'Medical grade', '~21% O₂ with balance N₂; low moisture/impurities', 'Cylinders, medical air systems, pipeline systems', 'Ventilators, respiratory therapy, anesthesia machines, hospital pipelines, nebulization'],
             ['/images/Individual gases/medical_nitrous_oxide.png', 'Medical Nitrous Oxide', 'N₂O', '10024-97-2', 'Colorless gas with mild sweet odor; anesthetic/analgesic', 'Medical grade', '≥98% N₂O', 'Medical gas cylinders', 'Surgical procedures, anesthesia, pain management, dental care, maternity care'],
-            ['/images/Individual gases/medical_entonox.png', 'Medical Entonox', '50% Oxygen / 50% Nitrous Oxide', 'Mixture (N/A)', 'Premixed medical gas (Oxygen/Nitrous Oxide)', 'Medical grade premix', '50% Oxygen / 50% Nitrous Oxide', 'Medical gas cylinders', 'Pain relief, emergency care, maternity care, minor procedures, ambulance use'],
-        ],
+            ['/images/Individual gases/medical_entonox.png', 'Medical Entonox', '50% O₂ / 50% N₂O', 'N/A', 'Premixed medical gas (O₂/N₂O)', 'Medical grade premix', '50% O₂ / 50% N₂O', 'Medical gas cylinders', 'Pain relief, emergency care, maternity care, minor procedures, ambulance use'],],
     },
     {
         id: 'specialty',
@@ -48,7 +47,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         subtitle: 'For technical, industrial, chemical, laboratory, process-specific, and calibration applications.',
         columns: ['Image', 'Product', 'Chemical Formula', 'CAS Number', 'Characteristics', 'Grade', 'Typical Purity', 'Container', 'Applications'],
         rows: [
-            ['/images/specialty_gases/LPG.avif', 'LPG', 'Propane, n-butane and isobutane', 'Mixture (N/A)', 'Flammable hydrocarbon mixture (propane/butane)', 'Commercial/Industrial', 'Varies by specification', 'LPG cylinders, bulk tanks', 'Cooking, heating, industrial burners, commercial energy supply'],
+            ['/images/specialty_gases/LPG.avif', 'LPG', 'C₃H₈, n-C₄H₁₀ and i-C₄H₁₀', 'N/A', 'Flammable hydrocarbon mixture (C₃H₈/C₄H₁₀)', 'Commercial/Industrial', 'Varies by specification', 'LPG cylinders, bulk tanks', 'Cooking, heating, industrial burners, commercial energy supply'],
             ['/images/specialty_gases/methane.png', 'Methane', 'CH₄', '74-82-8', 'Colorless, odorless, highly flammable gas', 'Industrial/Specialty', '99% – 99.999%', 'High-pressure cylinders', 'Calibration gas, fuel applications, research, combustion studies'],
             ['/images/specialty_gases/chlorine.png', 'Chlorine', 'Cl₂', '7782-50-5', 'Greenish-yellow toxic, corrosive oxidizing gas', 'Industrial/Specialty', '99.5%+', 'Special chlorine cylinders/drums', 'Water treatment, chemical manufacturing, disinfection'],
             ['/images/specialty_gases/propane.png', 'Propane', 'C₃H₈', '74-98-6', 'Colorless flammable hydrocarbon gas', 'Industrial/Commercial', '95% – 99.5%', 'Cylinders, LPG containers', 'Heating, cutting, brazing, cooking, industrial burners'],
