@@ -77,7 +77,7 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
                     href={`/contact?product=${encodeURIComponent(title)}`}
                     className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-400 text-white px-5 py-3 rounded-lg font-semibold transition-all hover:shadow-md active:scale-95"
                 >
-                    <ShoppingCart className="w-4 h-4" />
+                    {/* <ShoppingCart className="w-4 h-4" /> */}
                     Get Price and Availability
                 </Link>
             </div>
