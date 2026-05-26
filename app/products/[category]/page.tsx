@@ -36,7 +36,7 @@ const CATEGORY_BANNERS: Record<string, string> = {
     industrial: '/images/top_banner_images/products_industrial_gases.png',
     medical: '/images/home/services/medical_gases2.jpg',
     specialty: '/images/top_banner_images/products_specialty_gases.png',
-    cylinders: '/images/top_banner_images/products_gas_cylinders.png',
+    cylinders: '/images/top_banner_images/products_industrial_gases.png',
     accessories: '/images/top_banner_images/products_accessories.png',
     welding: '/images/top_banner_images/products_welding.png',
     dryice: '/images/top_banner_images/products_dryice.png',
@@ -53,7 +53,7 @@ export default async function ProductCategoryPage({ params }: PageProps) {
     return (
         <main className="pt-[88px]">
             {/* Hero */}
-            <section 
+            <section
                 className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"
                 style={{ backgroundImage: `url('${CATEGORY_BANNERS[currentCategory.id] || "/images/top_banner_images/services.png"}')` }}
             >
