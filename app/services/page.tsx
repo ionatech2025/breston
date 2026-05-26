@@ -94,7 +94,7 @@ export default function ServicesPage() {
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-16 md:py-20"
-                style={{ backgroundImage: "url('/images/top_banner_images/products_gas_cylinders.png')" }}
+                style={{ backgroundImage: "url('/images/top_banner_images/products_industrial_gases.png')" }}
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/80 to-brand-blue-700/80" />
                 <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
