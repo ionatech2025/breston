@@ -181,7 +181,7 @@ export default function ContactForm() {
           id="message"
           name="message"
           required
-          rows={5}
+          rows={10}
           value={form.message}
           onChange={handleChange}
           placeholder="Tell us how we can help you..."

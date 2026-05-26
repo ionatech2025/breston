@@ -91,7 +91,7 @@ export default function ContactPage() {
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid lg:grid-cols-5 gap-10">
 
-                        {/* Left column: map + quick service reference */}
+                        {/* Left column: map + Emergency Support + quick service reference */}
                         <div className="lg:col-span-2 flex flex-col gap-6">
 
                             {/* Map */}
@@ -106,6 +106,28 @@ export default function ContactPage() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Breston Technologies Location – Kanyanya, Gayaza Road, Kampala"
                                 />
+                            </div>
+
+                            {/* Emergency support */}
+                            <div className="bg-red-50 rounded-2xl border border-red-100 p-6">
+                                <div className="flex items-start gap-3 mb-3">
+                                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
+                                        <AlertTriangle className="w-5 h-5 text-red-500" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Emergency Support</h3>
+                                        <p className="text-sm text-gray-600">
+                                            For urgent medical gas supply or emergency support requests, contact us directly by phone.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a
+                                    href={`tel:${BRAND.phone1}`}
+                                    className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors w-full mt-2"
+                                >
+                                    <Phone className="w-4 h-4" />
+                                    Emergency Line: {BRAND.phone1}
+                                </a>
                             </div>
 
                             {/* Quick services */}
@@ -129,7 +151,7 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        {/* Right column: Working Hours → Form → Emergency Support */}
+                        {/* Right column: Working Hours → Form */}
                         <div className="lg:col-span-3 flex flex-col gap-6">
 
                             {/* Working hours — top bread */}
@@ -161,28 +183,6 @@ export default function ContactPage() {
                                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
                                 <p className="text-gray-600 mb-7">Fill in the form and our team will respond promptly.</p>
                                 <ContactForm />
-                            </div>
-
-                            {/* Emergency support — bottom bread */}
-                            <div className="bg-red-50 rounded-2xl border border-red-100 p-6">
-                                <div className="flex items-start gap-3 mb-3">
-                                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center shrink-0">
-                                        <AlertTriangle className="w-5 h-5 text-red-500" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 mb-1">Emergency Support</h3>
-                                        <p className="text-sm text-gray-600">
-                                            For urgent medical gas supply or emergency support requests, contact us directly by phone.
-                                        </p>
-                                    </div>
-                                </div>
-                                <a
-                                    href={`tel:${BRAND.phone1}`}
-                                    className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors w-full mt-2"
-                                >
-                                    <Phone className="w-4 h-4" />
-                                    Emergency Line: {BRAND.phone1}
-                                </a>
                             </div>
 
                         </div>
