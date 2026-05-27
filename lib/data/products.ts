@@ -106,7 +106,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         subtitle: 'Solid carbon dioxide for cold chain logistics, preservation, and industrial applications.',
         columns: ['Image', 'Product', 'Chemical Formula', 'CAS Number', 'Characteristics', 'Grade', 'Container', 'Applications'],
         rows: [
-            ['/images/Product category/Landscape/dry_ice.png', 'Dry Ice', 'Solid CO₂', '124-38-9', 'Solid carbon dioxide; extremely cold; sublimates directly from solid to gas', 'Industrial/Food grade', 'Insulated boxes, dry ice containers, pellets or blocks', 'Cold storage, food preservation, medical sample transport, vaccine logistics, industrial cooling, dry ice blasting'],
+            ['/images/Dry_Ice/Dry_Ice.png', 'Dry Ice', 'Solid CO₂', '124-38-9', 'Solid carbon dioxide; extremely cold; sublimates directly from solid to gas', 'Industrial/Food grade', 'Insulated boxes, dry ice containers, pellets or blocks', 'Cold storage, food preservation, medical sample transport, vaccine logistics, industrial cooling, dry ice blasting'],
         ],
     },
 ];
