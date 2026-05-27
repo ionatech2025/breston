@@ -78,12 +78,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         columns: ['Image', 'Product', 'Applications'],
         rows: [
             ['/images/Gas_Accessories/Regulators.png', 'Gas Regulators', 'Control cylinder pressure; welding, laboratories, medical systems, industrial gas use'],
-            // ['/images/Gas accessories/flowmeters.png', 'Flowmeters', 'Measure and control gas flow rate; medical oxygen delivery, laboratory systems'],
+            ['/images/Gas_Accessories/Flow_Meters.png', 'Flowmeters', 'Measure and control gas flow rate; medical oxygen delivery, laboratory systems'],
             ['/images/Gas_Accessories/Valves.png', 'Valves', 'Control gas flow and shut-off; cylinder systems, manifolds, pipelines'],
             ['/images/Gas_Accessories/Hoses_and_Fittings.png', 'Hoses and Fittings', 'Connect cylinders, regulators, torches, and equipment safely'],
             ['/images/Gas_Accessories/Gas_Manifolds.png', 'Gas Manifolds', 'Connect multiple cylinders for continuous supply; hospitals, laboratories, industrial systems'],
             ['/images/Gas_Accessories/Cylinder_Trolleys.png', 'Cylinder Trolleys', 'Enable safe movement of cylinders; hospitals, workshops, warehouses, delivery operations'],
-            // ['/images/Gas accessories/safety_equipment.png', 'Safety Equipment', 'Supports safe handling and use of gases; gas storage areas, welding operations'],
             ['/images/Gas_Accessories/pressure_gauges.png', 'Pressure Gauges', 'Display cylinder or system pressure; regulators, gas lines, manifolds'],
             ['/images/Gas_Accessories/flashback_arrestors.png', 'Flashback Arrestors', 'Prevent flame from traveling back into hoses or cylinders; oxy-fuel welding and cutting systems'],
             ['/images/Gas_Accessories/Valve_Taps_and_Spindle_Keys.png', 'Spindle Keys', 'Open and close cylinder valves safely; medical and industrial gas cylinder operation'],
@@ -95,10 +94,10 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         subtitle: 'Complete welding accessories for professional fabrication and repair operations.',
         columns: ['Image', 'Product', 'Applications'],
         rows: [
-            ['/images/Oxy-acetelyene set.png', 'Oxy-Acetylene Set', 'Complete solution for welding, cutting, brazing, heating, and repair; includes regulators, hoses, torches, nozzles, flashback arrestors, cylinder trolleys'],
-            ['/images/Welding torch.png', 'Welding Torch', 'Delivers controlled flame for welding and heating operations'],
-            ['/images/Cutting torch.png', 'Cutting Torch', 'Produces high-temperature flame for metal cutting'],
-            ['/images/Welding torch.png', 'Torch Nozzles', 'Direct and shape gas flame for specific welding, cutting, or brazing requirements'],
+            ['/images/Welding_Accessories/Oxy_Acetylene_Set.png', 'Oxy-Acetylene Set', 'Complete solution for welding, cutting, brazing, heating, and repair; includes regulators, hoses, torches, nozzles, flashback arrestors, cylinder trolleys'],
+            ['/images/Welding_Accessories/Welding_Torch.png', 'Welding Torch', 'Delivers controlled flame for welding and heating operations'],
+            ['/images/Welding_Accessories/Cutting_Torch.png', 'Cutting Torch', 'Produces high-temperature flame for metal cutting'],
+            ['/images/Welding_Accessories/Cutting_and_Welding_Nozzles.png', 'Torch Nozzles', 'Direct and shape gas flame for specific welding, cutting, or brazing requirements'],
         ],
     },
     {
