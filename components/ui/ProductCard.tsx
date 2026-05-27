@@ -24,11 +24,11 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
 
     return (
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all flex flex-col h-full group">
-            <div className="relative h-56 bg-gray-50 overflow-hidden">
+            <div className="relative h-72 bg-gray-50 overflow-hidden flex items-center justify-center p-2">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 right-3">
                     <span className="bg-white/90 backdrop-blur-sm text-brand-blue-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
