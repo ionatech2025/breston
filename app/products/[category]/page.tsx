@@ -39,7 +39,7 @@ const CATEGORY_BANNERS: Record<string, string> = {
     cylinders: '/images/top_banner_images/products_industrial_gases.png',
     accessories: '/images/top_banner_images/products_accessories.png',
     welding: '/images/top_banner_images/products_welding.png',
-    dryice: '/images/top_banner_images/products_dryice.png',
+    dryice: '/images/top_banner_images/Dry_Ice.png',
 };
 
 export default async function ProductCategoryPage({ params }: PageProps) {
