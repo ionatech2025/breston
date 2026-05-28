@@ -6,7 +6,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import CTABanner from '@/components/ui/CTABanner';
 import CylinderWarning from '@/components/ui/CylinderWarning';
 import { PRODUCT_CATEGORIES } from '@/lib/data/products';
-import { cn } from '@/lib/utils';
+import CategoryNav from '@/components/ui/CategoryNav';
 
 interface PageProps {
     params: Promise<{
@@ -69,24 +69,7 @@ export default async function ProductCategoryPage({ params }: PageProps) {
 
             {/* Category nav */}
             <section className="bg-white border-b border-gray-200 sticky top-[88px] z-40 shadow-sm">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
-                        {PRODUCT_CATEGORIES.map((cat) => (
-                            <Link
-                                key={cat.id}
-                                href={`/products/${cat.id}`}
-                                className={cn(
-                                    "shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap",
-                                    currentCategory.id === cat.id
-                                        ? "text-brand-blue-500 bg-brand-blue-50 font-semibold"
-                                        : "text-gray-600 hover:text-brand-blue-500 hover:bg-brand-blue-50"
-                                )}
-                            >
-                                {cat.title}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
+                <CategoryNav categories={PRODUCT_CATEGORIES} currentCategoryId={currentCategory.id} />
             </section>
 
             {/* Product cards */}
