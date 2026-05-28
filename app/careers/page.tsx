@@ -72,7 +72,7 @@ const ROLES = [
         ],
     },
     {
-        image: '/images/careers/breston_early_opportunities.png',
+        image: '/images/careers/graduate_opportunities.png',
         title: 'Early Career Opportunities',
         department: 'Various',
         description: 'We welcome students, recent graduates, and early-career professionals looking to grow in a dynamic industry.',
