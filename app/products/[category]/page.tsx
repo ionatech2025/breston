@@ -109,9 +109,6 @@ export default async function ProductCategoryPage({ params }: PageProps) {
             </section>
 
             <CTABanner />
-            {['purity', 'industrial', 'medical', 'specialty', 'cylinders', 'welding'].includes(currentCategory.id) && (
-                <CylinderWarning />
-            )}
         </main>
     );
 }
