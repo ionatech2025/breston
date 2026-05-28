@@ -30,11 +30,6 @@ export default function ProductCard({ columns, row }: ProductCardProps) {
                     alt={title}
                     className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 right-3">
-                    <span className="bg-white/90 backdrop-blur-sm text-brand-blue-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                        Available
-                    </span>
-                </div>
             </div>
 
             <div className="p-6 flex-1 flex flex-col">
