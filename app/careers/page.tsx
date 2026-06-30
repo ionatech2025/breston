@@ -34,7 +34,7 @@ const WHY_US = [
 
 const ROLES = [
     {
-        image: '/images/careers/trucker_drivers.png',
+        image: '/images/careers/trucker_drivers.jpg',
         title: 'Drivers & Logistics',
         department: 'Operations',
         description: 'Responsible and safety-conscious drivers to support our transportation and delivery operations across Uganda.',
@@ -53,7 +53,7 @@ const ROLES = [
         ],
     },
     {
-        image: '/images/careers/sales&customer_services.png',
+        image: '/images/careers/sales&customer_services.webp',
         title: 'Sales & Customer Service',
         department: 'Commercial',
         description: 'Help clients identify the right products and solutions for their operations, and build lasting relationships.',
@@ -72,7 +72,7 @@ const ROLES = [
         ],
     },
     {
-        image: '/images/careers/graduate_opportunities.png',
+        image: '/images/careers/graduate_opportunities.webp',
         title: 'Early Career Opportunities',
         department: 'Various',
         description: 'We welcome students, recent graduates, and early-career professionals looking to grow in a dynamic industry.',
