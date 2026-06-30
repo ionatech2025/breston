@@ -97,7 +97,7 @@ export default function CareersPage() {
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-20"
-                style={{ backgroundImage: "url('/images/top_banner_images/careers.png')" }}
+                style={{ backgroundImage: "url('/images/top_banner_images/careers.jpg')" }}
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/80 to-brand-blue-700/80" />
                 <div className="relative max-w-7xl mx-auto px-4 text-center z-10">

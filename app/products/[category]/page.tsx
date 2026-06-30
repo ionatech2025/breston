@@ -32,12 +32,12 @@ export async function generateMetadata({ params }: PageProps) {
 
 const CATEGORY_BANNERS: Record<string, string> = {
     purity: '/images/home/services/high_purity_gases2.jpg',
-    industrial: '/images/top_banner_images/products_industrial_gases.png',
+    industrial: '/images/top_banner_images/products_industrial_gases.webp',
     medical: '/images/home/services/medical_gases2.jpg',
-    specialty: '/images/top_banner_images/products_specialty_gases.png',
-    cylinders: '/images/top_banner_images/products_industrial_gases.png',
-    accessories: '/images/top_banner_images/products_accessories.png',
-    welding: '/images/top_banner_images/products_welding.png',
+    specialty: '/images/top_banner_images/products_specialty_gases.webp',
+    cylinders: '/images/top_banner_images/products_industrial_gases.webp',
+    accessories: '/images/top_banner_images/products_accessories.webp',
+    welding: '/images/top_banner_images/products_welding.webp',
     dryice: '/images/top_banner_images/Dry_Ice.png',
 };
 
