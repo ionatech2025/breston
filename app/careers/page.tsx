@@ -34,7 +34,7 @@ const WHY_US = [
 
 const ROLES = [
     {
-        image: '/images/careers/trucker_drivers.png',
+        image: '/images/careers/trucker_drivers.jpg',
         title: 'Drivers & Logistics',
         department: 'Operations',
         description: 'Responsible and safety-conscious drivers to support our transportation and delivery operations across Uganda.',
@@ -53,7 +53,7 @@ const ROLES = [
         ],
     },
     {
-        image: '/images/careers/sales&customer_services.png',
+        image: '/images/careers/sales&customer_services.webp',
         title: 'Sales & Customer Service',
         department: 'Commercial',
         description: 'Help clients identify the right products and solutions for their operations, and build lasting relationships.',
@@ -72,7 +72,7 @@ const ROLES = [
         ],
     },
     {
-        image: '/images/careers/graduate_opportunities.png',
+        image: '/images/careers/graduate_opportunities.webp',
         title: 'Early Career Opportunities',
         department: 'Various',
         description: 'We welcome students, recent graduates, and early-career professionals looking to grow in a dynamic industry.',
@@ -97,7 +97,7 @@ export default function CareersPage() {
             {/* Hero */}
             <section
                 className="relative bg-cover bg-center bg-no-repeat py-20"
-                style={{ backgroundImage: "url('/images/top_banner_images/careers.png')" }}
+                style={{ backgroundImage: "url('/images/top_banner_images/careers.jpg')" }}
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-900/80 to-brand-blue-700/80" />
                 <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
